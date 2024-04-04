@@ -1,6 +1,5 @@
-// import ICONS from "../helpers/constant";
-// import { useState } from "react";
 // import BaseIcon from "./BaseIcon.jsx";
+import { ICONS } from "../helpers/constant";
 
 export default function BaseAlert({ variant, title, text }) {
   const alertTypes = {
@@ -8,14 +7,14 @@ export default function BaseAlert({ variant, title, text }) {
     success: "SUCCESS",
     danger: "DANGER",
     warning: "WARNING",
-    bell: "BELL",
+    // bell: "BELL",
   };
 
   let classes = {
     bg: `bg-blue-50`,
     iconClass: `text-blue-400`,
-    title: `text-blue-600`,
-    text: `text-blue-800`,
+    title: `text-blue-500`,
+    text: `text-blue-600`,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -32,14 +31,13 @@ export default function BaseAlert({ variant, title, text }) {
     ),
   };
 
-  // const variant = "bg-amber-50";
   switch (variant) {
     case alertTypes.success:
       classes = {
         bg: `bg-emerald-50`,
         iconClass: `text-emerald-400`,
-        title: `text-emerald-700`,
-        text: `text-emerald-800`,
+        title: `text-emerald-500`,
+        text: `text-emerald-600`,
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +58,8 @@ export default function BaseAlert({ variant, title, text }) {
       classes = {
         bg: `bg-red-50`,
         iconClass: `text-red-400`,
-        title: `text-red-900`,
-        text: `text-red-800`,
+        title: `text-red-700`,
+        text: `text-red-600`,
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +80,8 @@ export default function BaseAlert({ variant, title, text }) {
       classes = {
         bg: `bg-yellow-50`,
         iconClass: `text-yellow-400`,
-        title: `text-yellow-900`,
-        text: `text-yellow-800`,
+        title: `text-yellow-800`,
+        text: `text-yellow-700`,
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,56 +105,25 @@ export default function BaseAlert({ variant, title, text }) {
   return (
     <>
       <div className="border-2 border-zinc-100 m-3 rounded-lg">
-        <div className="flex gap-2 py-3 justify-center ">
+        <div className="flex py-3 justify-center ">
           <div className={"p-3 rounded-lg w-2/3 " + classes.bg}>
-            <div className={"text-md font-bold py-1 " + classes.text}>
-              <span className={"px-1 " + classes.iconClass}>
-                {classes.icon}
-              </span>
-              <span className={classes.text}>{title}</span>
+            <div className={" text-md py-1 " + classes.text}>
+              <div className="flex gap-2">
+                <div className={classes.iconClass}>
+                  {classes.icon}
+                  {/* <BaseIcon iconName={ICONS.Success}></BaseIcon> */}
+                </div>
+                <div className="flex flex-col mt-1">
+                  <h5 className={"text-sm font-bold " + classes.text}>
+                    {title}
+                  </h5>
+                  <p className={"text-xs " + classes.text}>{text}</p>
+                </div>
+              </div>
             </div>
-            <p className={"text-sm " + classes.text}>{text}</p>
           </div>
         </div>
       </div>
-
-      {/* <div className="border-2 border-zinc-100 m-3 rounded-lg">
-        <div className="flex p-3 justify-center ">
-          <div className=" bg-blue-100 p-3 rounded-lg w-2/3">
-            <div className="text-md font-bold text-blue-700 py-1">
-              <BaseIcon
-                className="flex h-4 w-4 text-zinc-200 hover:text-zinc-100"
-                iconName={ICONS.Plus}
-              ></BaseIcon>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <span>Attention needed</span>
-            </div>
-
-            <p className="text-sm text-blue-600">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio,
-              necessitatibus nisi distinctio obcaecati animi commodi eligendi
-              vel consequuntur suscipit dignissimos consequuntur suscipit
-              dignissimos?
-            </p>
-          </div>
-          <p className={classes.bg}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio,
-            necessitatibus nisi distinctio obcaecati animi commodi eligendi vel
-            consequuntur suscipit dignissimos consequuntur suscipit dignissimos?
-          </p>
-        </div>
-      </div> */}
     </>
   );
 }
