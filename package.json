@@ -1,7 +1,7 @@
 {
-  "name": "base-banner-alert",
-  "private": true,
+  "name": "react-basecomponent-alert",
   "version": "0.0.0",
+  "main":"index.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
