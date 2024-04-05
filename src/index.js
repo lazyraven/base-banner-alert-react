@@ -1,5 +1,3 @@
-function sayHello() {
-  console.log("say hello WORLD!!");
-}
+import App from "../src/App";
 
-sayHello();
+export default App;
