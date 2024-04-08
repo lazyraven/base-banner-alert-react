@@ -18,7 +18,7 @@ export default function BaseAlert({ variant, title, text }) {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 inline"
+        className="h-5 w-5 inline"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -41,7 +41,7 @@ export default function BaseAlert({ variant, title, text }) {
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 inline"
+            className="h-5 w-5 inline"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -63,7 +63,7 @@ export default function BaseAlert({ variant, title, text }) {
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 inline"
+            className="h-5 w-5 inline"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -85,7 +85,7 @@ export default function BaseAlert({ variant, title, text }) {
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 inline"
+            className="h-5 w-5 inline"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
