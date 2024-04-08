@@ -1,10 +1,9 @@
 {
   "name": "react-basecomponent-alert",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "src/index.js",
   "author": "Nisha",
   "keywords": ["react", "components", "ui"],
   "files": [
@@ -16,10 +15,7 @@
     "url": "git@github.com:lazyraven/base-banner-alert-react.git"
 },
   "scripts": {
-    "dev": "vite",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
